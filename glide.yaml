@@ -57,3 +57,11 @@ import:
   version: release-6.0
 - package: github.com/appscode/kubernetes-webhook-util
   version: release-6.0
+- package: github.com/openshift/api
+  version: release-3.9
+- package: github.com/openshift/client-go
+  version: release-3.9
+- package: github.com/openshift/origin
+  version: v3.9.0
+- package: github.com/appscode/ocutil
+  version: release-3.9

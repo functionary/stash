@@ -1,5 +1,5 @@
-hash: 39b9784006e2fdde6ce6820baacfc8afceab5316e268a079ea05abbf307d23f1
-updated: 2018-04-09T07:18:55.25885292-07:00
+hash: e8bc5728e992672d230c5d874a209b8feefec74ae64aa558e4b0f77e1c08f9fd
+updated: 2018-04-11T07:39:57.119338937-07:00
 imports:
 - name: bitbucket.org/ww/goautoneg
   version: 75cd24fc2f2c2a2088577d12123ddee5f54e0675
@@ -37,7 +37,7 @@ imports:
   - runtime/serializer/versioning
   - workload/v1
 - name: github.com/appscode/kutil
-  version: 97071957a4aa713c2245bb675a53939de3f3ef1a
+  version: c299ac799e9bf6554ee91c5e2863c6f8392b7f83
   subpackages:
   - apiextensions/v1beta1
   - apps/v1beta1
@@ -54,6 +54,10 @@ imports:
   - tools/queue
 - name: github.com/appscode/mergo
   version: e3000cb3d28c72b837601cac94debd91032d19fe
+- name: github.com/appscode/ocutil
+  version: c19400b3339c44efdfe4aa5682cbc7f84694273c
+  subpackages:
+  - apps/v1
 - name: github.com/appscode/pat
   version: 48ff78925b7955367d8a048fc2b5cec8efadf8d3
 - name: github.com/Azure/go-autorest
@@ -275,6 +279,19 @@ imports:
   version: 0d921e363e951d89f583292c60d013c318df64dc
   subpackages:
   - apps/v1
+- name: github.com/openshift/client-go
+  version: 42d4abb856ce41c204a6e24342f12be5b5cd9ab8
+  subpackages:
+  - apps/clientset/versioned
+  - apps/clientset/versioned/scheme
+  - apps/clientset/versioned/typed/apps/v1
+  - apps/informers/externalversions
+  - apps/informers/externalversions/apps
+  - apps/informers/externalversions/apps/v1
+  - apps/informers/externalversions/internalinterfaces
+  - apps/listers/apps/v1
+- name: github.com/openshift/origin
+  version: 191fece9305a76f262baacc9de72c2c8cb4d5601
 - name: github.com/pborman/uuid
   version: ca53cad383cad2479bbba7f7a1a05797ec1386e4
 - name: github.com/peterbourgon/diskv
