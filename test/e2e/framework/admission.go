@@ -18,12 +18,12 @@ import (
 
 func (f *Framework) NewTestStashOptions(kubeConfigPath string, controllerOptions *srvr.ControllerOptions,isClusterTest bool) *srvr.StashOptions {
 	opt := srvr.NewStashOptions(os.Stdout, os.Stderr)
+	opt.RecommendedOptions.Authentication.RemoteKubeConfigFile = kubeConfigPath
+	opt.RecommendedOptions.Authentication.SkipInClusterLookup = true
+	opt.RecommendedOptions.Authorization.RemoteKubeConfigFile = kubeConfigPath
+	opt.RecommendedOptions.CoreAPI.CoreAPIKubeconfigPath = kubeConfigPath
+	opt.RecommendedOptions.SecureServing.BindPort = 8443
 	if !isClusterTest{
-		opt.RecommendedOptions.Authentication.RemoteKubeConfigFile = kubeConfigPath
-		opt.RecommendedOptions.Authentication.SkipInClusterLookup = true
-		opt.RecommendedOptions.Authorization.RemoteKubeConfigFile = kubeConfigPath
-		opt.RecommendedOptions.CoreAPI.CoreAPIKubeconfigPath = kubeConfigPath
-		opt.RecommendedOptions.SecureServing.BindPort = 8443
 		opt.RecommendedOptions.SecureServing.BindAddress = net.ParseIP("127.0.0.1")
 	}
 	opt.ControllerOptions = controllerOptions
